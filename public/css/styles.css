@@ -172,10 +172,14 @@ section {
 
 .container_img_quem_somos {
     width: 90%;
+    position: relative;
+    border-radius: 10px;
 }
 
 .img_quem_somos {
     width: 100%;
+    border-radius: 10px;
+
 }
 
 .nossos_servicos {
@@ -203,7 +207,6 @@ section {
 
 .card_servicos {
     position: relative;
-    /* Necessário para posicionar o pseudo-elemento */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,13 +300,13 @@ section {
 }
 
 .contato {
-    height: 90vh;
+    height: 85vh;
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
 .container_contato {
-    height: 60%;
+    height: 65%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto auto;
@@ -419,49 +422,129 @@ section {
     gap: 10%;
 }
 
-
-
-.icon_contato {
-    font-size: 20px;
-    transition: color 0.3s ease-in-out;
-}
-
-.txt_contato {
-    font-size: 18px;
-    margin-left: 5px;
-    transition: color 0.3s ease-in-out;
-}
-
-.linha_contato {
+.linha_caixa_contato {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.linha_caixa_contato i,
+.linha_caixa_contato p {
+    color: #38C700;
     transition: color 0.3s ease-in-out;
 }
 
-.linha_contato:hover .txt_contato {
-    cursor: pointer;
+.linha_caixa_contato:hover i,
+.linha_caixa_contato:hover p {
     color: #FF8100;
 }
 
-.linha_contato:hover .icon_contato {
-    cursor: pointer;
-    color: #FF8100;
-}
-
-.linha_contato2 {
-    width: 100%;
+.linha_caixa_contato_icons {
     display: flex;
+    width: 50%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.icon_contato2 {
+.icon_txt_caixa_contato2 {
+    text-decoration: none;
+    width: fit-content;
+}
+
+.icon_txt_caixa_contato2 i {
+    color: #38C700;
     font-size: 35px;
     transition: color 0.3s ease-in-out;
+    text-decoration: none;
 }
 
-.icon_contato2:hover {
-    cursor: pointer;
+.icon_txt_caixa_contato2:hover i {
     color: #FF8100;
+}
+
+
+
+footer {
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr auto;
+    column-gap: 24px;
+    height: 30vh;
+    border-top: 2px solid #38C700;
+}
+
+.caixa_contato_footer {
+    margin-top: 20px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10%;
+}
+
+
+.txt_footer {
+    font-size: 14px;
+}
+
+.txt_direitos_footer {
+    grid-row: 2/3;
+    grid-column: 1/13;
+    text-align: center;
+    font-size: 14px;
+    color: #38C700;
+    transition: color 0.3s ease-in-out;
+    padding-bottom: 10px;
+}
+
+.txt_direitos_footer:hover {
+    color: #FF8100;
+}
+
+.icons_footer {
+    width: 100%;
+    grid-column: 5/9;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.icons_footer a i {
+    font-size: 50px;
+}
+
+.logo_sem_fundo_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 10/13;
+    grid-row: 1/2;
+    width: 100%;
+}
+
+.logo_sem_fundo_footer img {
+    width: 90%;
+}
+
+/* Animações */
+
+.container_img_quem_somos::after, .container_img_quem_somos::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(red, blue);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.container_img_quem_somos::before{
+    filter: blur(1.5rem);
 }
