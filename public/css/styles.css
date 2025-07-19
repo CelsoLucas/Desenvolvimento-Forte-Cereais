@@ -563,7 +563,7 @@ footer {
 }
 
 .container_img_quem_somos::before {
-    filter: blur(2rem);
+    filter: blur(10rem);
 }
 
 @keyframes spin {
@@ -573,6 +573,6 @@ footer {
     }
     to {
         --angle: 360deg;
-        --angle2: -180deg;
+        --angle2: 540deg;
     }
 }
