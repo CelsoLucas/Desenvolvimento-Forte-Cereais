@@ -46,6 +46,10 @@ nav {
     justify-content: space-between;
 }
 
+.icon_menu{
+    display: none;
+}
+
 .link_menu {
     color: white;
     font-family: "poppins", sans-serif;
@@ -168,6 +172,8 @@ section {
     display: flex;
     justify-content: end;
     align-items: center;
+    justify-content: center;
+
 }
 
 .container_img_quem_somos {
@@ -543,7 +549,8 @@ footer {
     inherits: false;
 }
 
-.container_img_quem_somos::after, .container_img_quem_somos::before {
+.container_img_quem_somos::after,
+.container_img_quem_somos::before {
     --angle: 0deg;
     content: "";
     position: absolute;
@@ -571,8 +578,404 @@ footer {
         --angle: 0deg;
         --angle2: 180deg;
     }
+
     to {
         --angle: 360deg;
         --angle2: 540deg;
+    }
+}
+
+@media (max-width: 320px) {
+
+    body {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .link_menu {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row-reverse;
+    }
+
+    .link_logo_header {
+        width: 50%;
+    }
+
+    .icon_menu {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .titulos {
+        font-size: 1.35rem;
+    }
+
+    .txts {
+        font-size: 1rem;
+    }
+
+    .titulo_hero {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .subtitulo_hero {
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .btn_hero {
+        width: 50%;
+    }
+
+    .btn_saiba_mais,
+    .btn_mandar_mensagem {
+        font-size: 0.8rem;
+        width: 100%;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .quem_somos {
+        flex-direction: column;
+    }
+
+    .lado_esquerdo_quem_somos,
+    .lado_direito_quem_somos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .titulo_quem_somos {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nossos_servicos {
+        gap: 4%;
+    }
+
+    .container_servicos {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 0.8rem;
+        align-items: center;
+        gap: 4%;
+    }
+
+    .card_servicos {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        grid-column: 2/12;
+    }
+
+    .titulo_card_servico {
+        font-size: 1.2rem;
+    }
+
+    .txt_card_servico {
+        font-size: 0.8rem;
+    }
+
+    .card1 {
+        grid-row: 1/2;
+    }
+
+    .card3 {
+        grid-row: 2/3;
+    }
+
+    .logo_nossos_servicos {
+        grid-row: 3/4;
+        grid-column: 2/12;
+        width: 100%;
+        align-self: center;
+    }
+
+    .card2 {
+        grid-row: 4/5;
+    }
+
+    .card4 {
+        grid-row: 5/6;
+    }
+
+    .btn_atuacao {
+        width: 50%;
+    }
+
+    .txt_atuacao {
+        line-height: 30px;
+    }
+
+    .container_contato {
+        grid-template-rows: repeat(6, auto) 1fr;
+        gap: 4%;
+        height: 80%;
+    }
+
+    .container_input {
+        grid-column: 1/13;
+    }
+
+    .input_nome {
+        grid-row: 1/2;
+    }
+
+    .input_email {
+        grid-row: 2/3;
+    }
+
+    .input_telefone {
+        grid-row: 3/4;
+    }
+
+    .input_mensagem {
+        grid-row: 4/5;
+    }
+
+    .btn_contato {
+        grid-row: 5/6;
+        grid-column: 1/7;
+    }
+
+    .btn_mandar_mensagem {
+        font-size: 0.8rem;
+
+    }
+
+    .txt_aceito_termos {
+        grid-row: 6/7;
+        grid-column: 1/13;
+        font-size: 0.6rem;
+
+    }
+
+    .caixa_formas_contato {
+        grid-row: 7/8;
+        grid-column: 1/13;
+        height: 100%;
+    }
+
+    .txt_caixa_contato{
+        font-size: 0.8rem;
+    }
+    
+    .icon_txt_caixa_contato2 i{
+        font-size: 1.5rem;
+    }
+
+    .caixa_contato_footer{
+        display: none;
+    }
+
+    .icons_footer{
+        display: none;
+    }
+
+    .logo_sem_fundo_footer{
+        grid-column: 2/12;
+    }
+}
+
+
+@media (max-width: 425px) {
+
+    body {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .link_menu {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row-reverse;
+    }
+
+    .link_logo_header {
+        width: 50%;
+    }
+
+    .icon_menu {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .titulos {
+        font-size: 1.35rem;
+    }
+
+    .txts {
+        font-size: 1rem;
+    }
+
+    .titulo_hero {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .subtitulo_hero {
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .btn_hero {
+        width: 50%;
+    }
+
+    .btn_saiba_mais,
+    .btn_mandar_mensagem {
+        font-size: 0.8rem;
+        width: 100%;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .quem_somos {
+        flex-direction: column;
+    }
+
+    .lado_esquerdo_quem_somos,
+    .lado_direito_quem_somos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .titulo_quem_somos {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nossos_servicos {
+        gap: 4%;
+    }
+
+    .container_servicos {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 0.8rem;
+        align-items: center;
+        gap: 4%;
+    }
+
+    .card_servicos {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        grid-column: 2/12;
+    }
+
+    .titulo_card_servico {
+        font-size: 1.2rem;
+    }
+
+    .txt_card_servico {
+        font-size: 0.8rem;
+    }
+
+    .card1 {
+        grid-row: 1/2;
+    }
+
+    .card3 {
+        grid-row: 2/3;
+    }
+
+    .logo_nossos_servicos {
+        grid-row: 3/4;
+        grid-column: 2/12;
+        width: 100%;
+        align-self: center;
+    }
+
+    .card2 {
+        grid-row: 4/5;
+    }
+
+    .card4 {
+        grid-row: 5/6;
+    }
+
+    .btn_atuacao {
+        width: 50%;
+    }
+
+    .txt_atuacao {
+        line-height: 30px;
+    }
+
+    .container_contato {
+        grid-template-rows: repeat(6, auto) 1fr;
+        gap: 4%;
+        height: 80%;
+    }
+
+    .container_input {
+        grid-column: 1/13;
+    }
+
+    .input_nome {
+        grid-row: 1/2;
+    }
+
+    .input_email {
+        grid-row: 2/3;
+    }
+
+    .input_telefone {
+        grid-row: 3/4;
+    }
+
+    .input_mensagem {
+        grid-row: 4/5;
+    }
+
+    .btn_contato {
+        grid-row: 5/6;
+        grid-column: 1/7;
+    }
+
+    .btn_mandar_mensagem {
+        font-size: 0.8rem;
+
+    }
+
+    .txt_aceito_termos {
+        grid-row: 6/7;
+        grid-column: 1/13;
+        font-size: 0.6rem;
+
+    }
+
+    .caixa_formas_contato {
+        grid-row: 7/8;
+        grid-column: 1/13;
+        height: 100%;
+    }
+
+    .txt_caixa_contato{
+        font-size: 0.8rem;
+    }
+    
+    .icon_txt_caixa_contato2 i{
+        font-size: 1.5rem;
+    }
+
+    .caixa_contato_footer{
+        display: none;
+    }
+
+    .icons_footer{
+        display: none;
+    }
+
+    .logo_sem_fundo_footer{
+        grid-column: 2/12;
     }
 }
