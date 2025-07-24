@@ -783,11 +783,12 @@ footer {
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
 
     body {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+        background-size: 100vw 50vh;
     }
 
     .link_menu {
@@ -813,6 +814,10 @@ footer {
 
     .txts {
         font-size: 1rem;
+    }
+
+    .hero{
+        height: 50vh;
     }
 
     .titulo_hero {
@@ -906,8 +911,13 @@ footer {
         width: 50%;
     }
 
-    .txt_atuacao {
+    .atuacao{
+        height: 70vh;
+    }
+
+    .txt_atuacao, .txt_quem_somos {
         line-height: 30px;
+        font-size: 1.5rem;
     }
 
     .container_contato {
@@ -977,5 +987,27 @@ footer {
 
     .logo_sem_fundo_footer{
         grid-column: 2/12;
+    }
+}
+
+@media (max-height: 750px){
+
+    .nossos_servicos{
+        height: 130vh;
+    }
+
+    .container_servicos{
+        height: 100%;
+    }
+    .atuacao{
+        height: 90vh;
+    }
+
+    .contato{
+        height: 100vh;
+    }
+    .container_contato{
+        height: 90%;
+        gap: 5%;
     }
 }
